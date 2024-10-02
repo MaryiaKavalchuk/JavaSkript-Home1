@@ -5,9 +5,15 @@
 */
 
 // your code
-let sum
+let sum = 0
 let i = 1;
 
 while (i<=20){
-  if (i % )
+  if (i % 2 !== 0 ) {    // !== - сторогое не равно ; ! - не
+  sum = sum + i;
+  } // else {i++}
+  i = i + 1;
 }
+console.log(sum);
+
+
