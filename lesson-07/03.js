@@ -11,7 +11,7 @@
 */
 
 function truncate(str, maxLength) {
-  return (str.length > maxLength) ? str.slice (0, maxLength - 1) + "..." : str
+  return (str.length > maxLength) ? str.slice (0, maxLength - 3) + "..." : str
 }
 console.log(truncate("Вот, что мне действительно нравится в этом", 20)); // Ожидаемый результат: "Вот, что мне де..."
 console.log(truncate("Короткая строка", 20)); // Ожидаемый результат: "Короткая строка"
