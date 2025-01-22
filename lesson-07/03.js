@@ -11,7 +11,8 @@
 */
 
 function truncate(str, maxLength) {
-  return (str.length > maxLength) ? str.slice (0, maxLength - 1) + "..." : str
+  return (str.length > maxLength) ? str.slice (0, maxLength - 3) + "..." : str  //(условие верное) ? да(тогда вот это и возвращаешь) 
+  //: нет(тогда возвращаешь то что тут)
 }
 console.log(truncate("Вот, что мне действительно нравится в этом", 20));  
-console.log(truncate("Короткая строка", 20));
+console.log(truncate("Короткая строка", 20)); 
