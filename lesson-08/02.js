@@ -36,17 +36,20 @@ let timerId
 
 startButton.addEventListener('click', () => {
   if(isTimerStarted) return; // чтоьы не начинать новый интервал при повторном нажатиии на кнопку
-  let counter = 3
-  timerId = setInterval(() => {
-    isTimerStarted = true;
 
-    countdownDisplay.textContent = counter
-    if (counter <= 0) {
-      countdownDisplay.textContent = "🚀"
+  let counter = 3
+  countdownDisplay.textContent = counter;
+  isTimerStarted = true;
+
+  timerId = setInterval(() => {
+  counter = counter - 1;
+  if (counter > 0) {
+    countdownDisplay.textContent = counter;
+  } else {
+    countdownDisplay.textContent = "🚀"
       clearInterval(timerId) 
       isTimerStarted = false;
-    } 
-    counter = counter - 1;
+  }
   }, 1000)
 
   // your code
@@ -59,6 +62,7 @@ cancelButton.addEventListener('click', () => {
     clearInterval(timerId) 
     countdownDisplay.textContent = "Отменено"
     isTimerStarted = false
+    
   }
   
 
